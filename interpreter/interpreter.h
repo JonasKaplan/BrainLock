@@ -10,7 +10,7 @@ typedef enum _InterpreterStatusCode {
 } InterpreterStatusCode;
 
 /*
-Executes a brainfunc source file
+Executes a BrainLock source file
 
 `const char* source_file_path`: The path to the source file to be executed (Not OS agnostic)
 
