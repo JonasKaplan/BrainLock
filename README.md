@@ -15,7 +15,7 @@ example.bl:
 
 main.c:
 
-```brainfuck
+```c
 #include "interpreter.h"
 
 void main(void) {
