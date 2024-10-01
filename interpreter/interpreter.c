@@ -35,6 +35,10 @@ InterpreterStatusCode interpret(const char const* source_file_path) {
     fclose(source_file);
 
     Program* program = program_init(source_code, source_file_byte_count);
+    if (program == NULL) {
+        fprintf(stderr, "Memory allocation failure\n");
+        return INTERPRETER_ERR;
+    }
     ProgramStatusCode program_status = PROGRAM_OK;
     while (program_status == PROGRAM_OK) {
         program_status = program_step(program);
